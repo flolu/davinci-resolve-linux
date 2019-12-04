@@ -34,7 +34,7 @@
 
    - or run `./DaVinci_Resolve_XX.Y.Z_Linux.run`
 
-   ![DaVinci Resolve Installer](davinci-resolve-installer.png)
+   ![DaVinci Resolve Installer](./images/davinci-resolve-installer.png)
 
 6. Start Resolve by searching for it in your applications
 
@@ -118,7 +118,7 @@ ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 <output.mov>
 4. Set "Video Encoder" to "mpeg4"
 5. Set "Audio Encoder" to "pcm_s16le"
 
-![Open Broadcaster Software Output Settings](obs-output-settings.png)
+![Open Broadcaster Software Output Settings](./images/obs-output-settings.png)
 
 The resulting `.mov` can now be imported into DaVinci Resolve without any issues.
 
@@ -131,7 +131,7 @@ When exporting your edited video, I'd recommend:
 3. Under Video, choose "MPEG" as "Format"
 4. Under Audio, enable "Export Audio" if you want sound
 
-![DaVinci Resolve Render Settings](render-settings.png)
+![DaVinci Resolve Render Settings](./images/render-settings.png)
 
 With the above settings, you don't need to compress or convert the final file again.
 
@@ -141,7 +141,7 @@ With the above settings, you don't need to compress or convert the final file ag
 
 Run the same script, you used for installing Resolve (`DaVinci_Resolve_XX.Y.Z_Linux.run`) and choose "Uninstall DaVinci Resolve" in the second step.
 
-![Uninstall DaVinci Resolve](uninstall-davinci-resolve.png)
+![Uninstall DaVinci Resolve](./images/uninstall-davinci-resolve.png)
 
 **Method 2**
 
@@ -185,7 +185,7 @@ sudo apt install nvidia-driver-440
 
 You can also install it in the user interface by opening "Additional Drivers":
 
-![Install NVIDIA Driver](nvidia-drivers.png)
+![Install NVIDIA Driver](./images/nvidia-drivers.png)
 
 Then reboot you computer.
 
