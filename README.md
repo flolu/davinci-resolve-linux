@@ -37,6 +37,8 @@
 6. Start Resolve by searching for it in your applications
    - or run `/opt/resolve/bin/resolve`
 
+![DaVinci Resolve Installer](davinci-resolve-installer.png)
+
 **Method 2**
 
 1. Head to https://www.blackmagicdesign.com/products/davinciresolve
@@ -115,16 +117,20 @@ ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 <output.mov>
 4. Set "Video Encoder" to "mpeg4"
 5. Set "Audio Encoder" to "pcm_s16le"
 
+![Open Broadcaster Software Output Settings](obs-output-settings.png)
+
 The resulting `.mov` can now be imported into DaVinci Resolve without any issues.
 
 ## Media Export
 
 When exporting your edited video, I'd recommend:
 
-1. Select "YouTube" in the "Render Settings"
+1. Head to your "Render Settings"
 2. Under Video, choose "QuickTime" as "Format"
 3. Under Video, choose "MPEG" as "Format"
 4. Under Audio, enable "Export Audio" if you want sound
+
+![DaVinci Resolve Render Settings](render-settings.png)
 
 With the above settings, you don't need to compress or convert the final file again.
 
