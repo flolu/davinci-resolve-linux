@@ -20,7 +20,7 @@
 - Debian-bases Linux distribution
 - Relatively modern hardware
 - NVIDIA graphics card
-- [NVIDIA driver](https://github.com/flolude/davinci-resolve-linux#7-install-nvidia-driver)
+- [NVIDIA driver](https://github.com/flolude/davinci-resolve-linux#install-nvidia-driver)
 
 ## Installation
 
@@ -141,6 +141,8 @@ With the above settings, you don't need to compress or convert the final file ag
 
 Run the same script, you used for installing Resolve (`DaVinci_Resolve_XX.Y.Z_Linux.run`) and choose "Uninstall DaVinci Resolve" in the second step.
 
+![Uninstall DaVinci Resolve](uninstall-davinci-resolve.png)
+
 **Method 2**
 
 ```
@@ -180,6 +182,10 @@ Install recommended driver by running:
 ```
 sudo apt install nvidia-driver-440
 ```
+
+You can also install it in the user interface by opening "Additional Drivers":
+
+![Install NVIDIA Driver](nvidia-drivers.png)
 
 Then reboot you computer.
 
