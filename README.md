@@ -10,7 +10,7 @@
 - [Prerequisites](https://github.com/flolude/davinci-resolve-linux#prerequisites)
 - [Installation](https://github.com/flolude/davinci-resolve-linux#installation)
 - [Media Import](https://github.com/flolude/davinci-resolve-linux#media-import)
-- [Media Export](https://github.com/flolude/davinci-resolve-linux#uninstall-resolve)
+- [Media Export](https://github.com/flolude/davinci-resolve-linux#media-export)
 - [Uninstall Resolve](https://github.com/flolude/davinci-resolve-linux#uninstall-resolve)
 - [Handle Common Issues](https://github.com/flolude/davinci-resolve-linux#handle-common-issues)
 - [Install NVIDIA driver](https://github.com/flolude/davinci-resolve-linux#install-nvidia-driver)
@@ -81,13 +81,52 @@
 
 - For example if the error is: "Sorry. Need 'xorriso' to continue", you should run:
 
-```
-sudo apt-get install xorriso
-```
+  ```
+  sudo apt-get install xorriso
+  ```
 
 ## Media Import
 
+Unfortunately DaVinci Resolve free version doesn't support `.mp4` import on Linux. But we can work around this issue:
+
+**Convert your footage to a supported format**
+
+There is a really powerful tool called [FFmpeg](https://www.ffmpeg.org/) for converting video file formats. You can install it by running `sudo apt install ffmpeg`.
+
+Then you can convert almost any video format to something, that can be imported into DaVinci Resolve by running:
+
+```
+ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 <output.mov>
+```
+
+| Flag              | Explanation                                                                         |
+| ----------------- | :---------------------------------------------------------------------------------- |
+| `-i <input>`      | input video file (e.g. `-i my-movie.mp4`)                                           |
+| `-c:v prores_ks`  | video codec to be ProRes Kostya                                                     |
+| `-profile:v 3`    | profile (value ranges from 0 to 3, where a higher number results in better quality) |
+| `-qscale:v 9`     | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
+| `-i <output.mov>` | output video file (e.g. `-i my-movie-converted.mov`)                                |
+
+**Record your footage as a supported format with [Open Broadcaster Software](https://obsproject.com/)**
+
+1. Go to "Settings" 🠪 "Output" 🠪 "Recording"
+2. Change "Type" to "Custom Output (FFmpeg)"
+3. Set "Container Format" to "mov"
+4. Set "Video Encoder" to "mpeg4"
+5. Set "Audio Encoder" to "pcm_s16le"
+
+The resulting `.mov` can now be imported into DaVinci Resolve without any issues.
+
 ## Media Export
+
+When exporting your edited video, I'd recommend:
+
+1. Select "YouTube" in the "Render Settings"
+2. Under Video, choose "QuickTime" as "Format"
+3. Under Video, choose "MPEG" as "Format"
+4. Under Audio, enable "Export Audio" if you want sound
+
+With the above settings, you don't need to compress or convert the final file again.
 
 ## Uninstall Resolve
 
