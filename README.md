@@ -34,10 +34,11 @@
 
    - or run `./DaVinci_Resolve_XX.Y.Z_Linux.run`
 
-6. Start Resolve by searching for it in your applications
-   - or run `/opt/resolve/bin/resolve`
+   ![DaVinci Resolve Installer](davinci-resolve-installer.png)
 
-![DaVinci Resolve Installer](davinci-resolve-installer.png)
+6. Start Resolve by searching for it in your applications
+
+   - or run `/opt/resolve/bin/resolve`
 
 **Method 2**
 
@@ -148,6 +149,17 @@ sudo rm -f -r ~/Documents/BlackmagicDesign
 ```
 
 ## Handle Common Issues
+
+If the installation doesn't work, you probably need to research any errors from the log output.
+
+If DaVinci Resolve doesn't start after installing you might try the following:
+
+- Boot resolve by running `/opt/resolve/bin/resolve` and check the log output for errors
+- Open `~/.local/share/DaVinciResolve/logs/` and search for errors in the log files
+- Make sure you have CUDA and OpenCL libraries installed
+- If you're getting an error saying, that you need `ibOpenCL.so` then just run `sudo apt install ocl-icd-opencl-dev`
+
+If nothing fixed your issue, you can always get fast help on the [Blackmagic Forum](https://forum.blackmagicdesign.com/)
 
 ## Install NVIDIA driver
 
