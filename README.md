@@ -18,7 +18,6 @@
 ## Prerequisites
 
 - Debian-bases Linux distribution
-- Relatively modern hardware
 - NVIDIA graphics card
 - [NVIDIA driver](https://github.com/flolude/davinci-resolve-linux#install-nvidia-driver)
 
