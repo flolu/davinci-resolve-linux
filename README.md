@@ -98,7 +98,7 @@ There is a really powerful tool called [FFmpeg](https://www.ffmpeg.org/) for con
 Then you can convert almost any video format to something, that can be imported into DaVinci Resolve by running:
 
 ```
-ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 <output.mov>
+ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 output.mov
 ```
 
 | Flag              | Explanation                                                                         |
@@ -108,6 +108,12 @@ ffmpeg -i <input> -c:v prores_ks -profile:v 3 -qscale:v 9 <output.mov>
 | `-profile:v 3`    | profile (value ranges from 0 to 3, where a higher number results in better quality) |
 | `-qscale:v 9`     | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
 | `-i <output.mov>` | output video file (e.g. `-i my-movie-converted.mov`)                                |
+
+**Converting audio**
+
+```
+ffmpeg -i input.mp3 -c:a pcm_s16le output.wav
+```
 
 **Record your footage as a supported format with [Open Broadcaster Software](https://obsproject.com/)**
 
