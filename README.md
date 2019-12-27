@@ -109,6 +109,12 @@ ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 output.mov
 | `-qscale:v 9`     | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
 | `-i <output.mov>` | output video file (e.g. `-i my-movie-converted.mov`)                                |
 
+**Batch converting videos**
+
+```
+for i in *.mp4; do ffmpeg -i "$i" -c:v prores_ks -profile:v 3 -qscale:v 9 "${i%.*}.mov"; done
+```
+
 **Converting audio**
 
 ```
