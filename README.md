@@ -198,7 +198,7 @@ You can also install it in the user interface by opening "Additional Drivers":
 
 ![Install NVIDIA Driver](./images/nvidia-drivers.png)
 
-Then reboot you computer.
+Then reboot your computer.
 
 ---
 
