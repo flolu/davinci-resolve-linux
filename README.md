@@ -122,6 +122,12 @@ for i in *.mp4; do ffmpeg -i "$i" -c:v prores_ks -profile:v 3 -qscale:v 9 -acode
 ffmpeg -i input.mp3 -c:a pcm_s16le output.wav
 ```
 
+**Batch audio**
+
+```
+for i in *.mp3; do ffmpeg -i "$i" -c:a pcm_s16le "${i%.*}.mp3"; done
+```
+
 **Record your footage as a supported format with [Open Broadcaster Software](https://obsproject.com/)**
 
 1. Go to "Settings" 🠪 "Output" 🠪 "Recording"
