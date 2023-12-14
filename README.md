@@ -98,7 +98,7 @@ There is a really powerful tool called [FFmpeg](https://www.ffmpeg.org/) for con
 Then you can convert almost any video format to something, that can be imported into DaVinci Resolve by running:
 
 ```
-ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 output.mov
+ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 -acodec pcm_s16le output.mov
 ```
 
 | Flag              | Explanation                                                                         |
@@ -107,12 +107,13 @@ ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 output.mov
 | `-c:v prores_ks`  | video codec to be ProRes Kostya                                                     |
 | `-profile:v 3`    | profile (value ranges from 0 to 3, where a higher number results in better quality) |
 | `-qscale:v 9`     | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
+| `-acodec pcm_s16le` | audio codec to be pcm_s16le                                                       |
 | `-i <output.mov>` | output video file (e.g. `-i my-movie-converted.mov`)                                |
 
 **Batch converting videos**
 
 ```
-for i in *.mp4; do ffmpeg -i "$i" -c:v prores_ks -profile:v 3 -qscale:v 9 "${i%.*}.mov"; done
+for i in *.mp4; do ffmpeg -i "$i" -c:v prores_ks -profile:v 3 -qscale:v 9 -acodec pcm_s16le "${i%.*}.mov"; done
 ```
 
 **Converting audio**
