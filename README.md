@@ -101,14 +101,14 @@ Then you can convert almost any video format to something, that can be imported 
 ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 -acodec pcm_s16le output.mov
 ```
 
-| Flag              | Explanation                                                                         |
-| ----------------- | :---------------------------------------------------------------------------------- |
-| `-i <input>`      | input video file (e.g. `-i my-movie.mp4`)                                           |
-| `-c:v prores_ks`  | video codec to be ProRes Kostya                                                     |
-| `-profile:v 3`    | profile (value ranges from 0 to 3, where a higher number results in better quality) |
-| `-qscale:v 9`     | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
-| `-acodec pcm_s16le` | audio codec to be pcm_s16le                                                       |
-| `-i <output.mov>` | output video file (e.g. `-i my-movie-converted.mov`)                                |
+| Flag                | Explanation                                                                         |
+| ------------------- | :---------------------------------------------------------------------------------- |
+| `-i <input>`        | input video file (e.g. `-i my-movie.mp4`)                                           |
+| `-c:v prores_ks`    | video codec to be ProRes Kostya                                                     |
+| `-profile:v 3`      | profile (value ranges from 0 to 3, where a higher number results in better quality) |
+| `-qscale:v 9`       | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
+| `-acodec pcm_s16le` | audio codec to be pcm_s16le                                                         |
+| `-i <output.mov>`   | output video file (e.g. `-i my-movie-converted.mov`)                                |
 
 **Batch converting videos**
 
@@ -152,6 +152,30 @@ When exporting your edited video, I'd recommend:
 ![DaVinci Resolve Render Settings](./images/render-settings.png)
 
 With the above settings, you don't need to compress or convert the final file again.
+
+## Installing Sound Libraries
+
+If you want to install the free sound library from Davinci resolve, follow these steps
+
+Head over to the fairlight section of Davinci resolve > Sound Library and click "Download"
+
+![Sound library download](./images/SoundLibrary.png)
+
+You'll be sent to the Sound Library Download page for linux, put in all your info and download it.
+
+Once downloaded, go to where the file is located
+
+1. Left click on the file
+2. Click on properties
+3. Go on the Permissions tab
+4. Check on "Allow executing file as program"
+5. Double click on the file and choose "run in terminal"
+6. If done correctly you will see the sound library download open
+7. Go through all the steps and install!
+
+![Fairlight program](./images/Fairlight_sound_program.png)
+
+If you want to see all your sounds on the Sound Library, go to Davinci resolve and type "***"
 
 ## Uninstall Resolve
 
