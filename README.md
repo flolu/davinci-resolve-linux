@@ -108,7 +108,7 @@ ffmpeg -i input.mp4 -c:v prores_ks -profile:v 3 -qscale:v 9 -acodec pcm_s16le ou
 | `-profile:v 3`      | profile (value ranges from 0 to 3, where a higher number results in better quality) |
 | `-qscale:v 9`       | quality scale (value can be 5, 9 or 13, where 5 is best and 13 worst quality)       |
 | `-acodec pcm_s16le` | audio codec to be pcm_s16le                                                         |
-| `-i <output.mov>`   | output video file (e.g. `-i my-movie-converted.mov`)                                |
+| `<output.mov>`   | output video file (e.g. `my-movie-converted.mov`)                                |
 
 **Batch converting videos**
 
