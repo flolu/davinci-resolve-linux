@@ -56,19 +56,13 @@
   makeresolvedeb_XX.Y.Z-X.sh
   ```
 
-8. Run the `makeresolvedeb` script
-
-- For free version of DaVinci Resolve run:
+8. Run the `makeresolvedeb` script while passing the filename of DaVinci Resolve's .run file.
 
   ```
-  ./makeresolvedeb_XX.Y.Z-X.sh lite
+  ./makeresolvedeb_XX.Y.Z-X.sh DaVinci_Resolve_Studio_XX.Y.Z_Linux.run
   ```
+- Optionally you can avoid installing the Blackmagic RAW Player / Speed Test apps by adding the `--skip-braw`.  
 
-- For Studio version of DaVinci Resolve run:
-
-  ```
-  ./makeresolvedeb_XX.Y.Z-X.sh studio
-  ```
 
 9. Install the Resolve via the created `.deb` file
 
@@ -89,7 +83,7 @@
 
 ## Media Import
 
-Unfortunately DaVinci Resolve free version doesn't support `.mp4` import on Linux. But we can work around this issue:
+Unfortunately DaVinci Resolve's free version doesn't support `.mp4` import on Linux. Both version also neither supports the `AAC` audio codec. But we can work around this issue:
 
 **Convert your footage to a supported format**
 
